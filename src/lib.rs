@@ -10,7 +10,8 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
 pub fn generate(classes: Box<[JsValue]>) -> String {
-    let z = Zephyr::new();
+    let mut z = Zephyr::new();
+    z.pretty_print = true;
     let c = classes
         .iter()
         .filter_map(JsValue::as_string)
@@ -21,6 +22,7 @@ pub fn generate(classes: Box<[JsValue]>) -> String {
 #[wasm_bindgen]
 pub fn scrape_and_generate(html: String) -> String {
     let classes = get_classes(&html);
-    let z = Zephyr::new();
+    let mut z = Zephyr::new();
+    z.pretty_print = true;
     z.generate_classes(classes.iter().map(String::as_str))
 }

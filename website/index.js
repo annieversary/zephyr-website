@@ -1,4 +1,4 @@
-import init, { generate, scrape_and_generate } from "./wasm/zephyr_website.js";
+import init, { scrape_and_generate } from "./wasm/zephyr_website.js";
 
 const htmlInput = document.getElementById('html-input');
 const cssOutput = document.getElementById('css-output');
@@ -12,7 +12,7 @@ const runWasm = async () => {
   // Instantiate our wasm module
   await init("./wasm/zephyr_website_bg.wasm");
 
-  htmlInput.onchange = regen;
+  htmlInput.onkeyup = regen;
   regen();
 };
 runWasm();
