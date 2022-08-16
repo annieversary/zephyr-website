@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>zephyr</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <style>
+        :root {
+            --code-bg: #ccc;
+        }
+
+        * {
+            font-family: Arial;
+        }
+    </style>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+</head>
+
+<body>
+    <h1 class="">
+        zephyr playground
+    </h1>
+
+    <div class="flex-row">
+        <div class="w[50%]">
+            <h2>html</h2>
+            <textarea id="html-input" rows="20" cols="80" tabindex=""><html>
+    <head>
+        <title>my html</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <p class="m[1rem]">
+            hello
+        </p>
+    </body>
+</html></textarea>
+        </div>
+        <div class="w[50%]">
+            <h2>css</h2>
+            <div>
+                <code>
+                    <pre id="css-output" class="bg(code-bg) p[1rem]"></pre>
+                </code>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

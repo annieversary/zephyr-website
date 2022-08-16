@@ -1,0 +1,16 @@
+[package]
+name = "zephyr-website"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "generate_css"
+path = "src/generate_css.rs"
+
+[dependencies]
+zephyr = { path = "../zephyr", features = ["scraping"] }
+wasm-bindgen = "0.2.82"
+tracing-subscriber = "0.3.15"
