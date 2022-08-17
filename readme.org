@@ -1,0 +1,13 @@
+* zephyr-website
+
+this is the repository for the [[https://github.com/annieversary/zephyr][zephyr]] website, which is available [[https://versary.town/zephyr/][here]]
+
+it currently only contains the playground, in which you can try zephyr out
+
+** files and folders
+- =website= is what's actually uploaded
+- =src/lib.rs= contains the wasm library (written in rust)
+- =src/generate_css.rs= which generates =website/style.css=
+- =build-website.sh= compiles the library to wasm, generates css for the website, and runs [[https://github.com/thecoshman/http][http]]
+- =gen-css.sh= generates the css and runs =http=
+- =watch.sh= runs =cargo watch= with =gen-css.sh=

@@ -7,4 +7,6 @@ wasm-pack build --release \
 
 cargo r --bin generate_css
 
+if [ ! "$1" = "-r" ]; then
 http website
+fi

@@ -14,7 +14,7 @@
             font-family: Arial;
         }
     </style>
-    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./style.css" type="text/css" media="screen" />
 </head>
 
 <body>
@@ -22,11 +22,29 @@
         zephyr playground
     </h1>
 
+    <p>
+      <a href="https://github.com/annieversary/zephyr" target="_blank">zephyr</a> is a tailwind-inspired css generator dsl. it acts as a replacement for inline styles, with the added ability of pseudo-elements, pseudo-classes, and more
+      <br/>
+      so far the only documentation is on the <a href="https://github.com/annieversary/zephyr" target="_blank">github readme</a>
+    </p>
+    <p>
+      it's still unpolished, but i've been using it on production systems for a while and it's been nice :)
+      <br/>
+      this website itself uses zephyr. you can read the generated css <a href="./style.css" target="_blank">here</a>
+    </p>
+    <p>
+      this is a playground, which allows you write some html and see the generated css out of the parsed classes
+    </p>
+
+    <p>
+      try adding <code class="bg(code-bg) ff[monospace]">class="bg[black]"</code> on the <code class="bg(code-bg) ff[monospace]">body</code> tag
+    </p>
+
     <div class="flex-row">
         <div class="w[50%]">
             <h2>html</h2>
             <textarea id="html-input" rows="20" cols="60" tabindex=""
-              class="ff[serif]"
+              class="ff[monospace]"
             ><html>
     <head>
         <title>my html</title>
@@ -44,7 +62,7 @@
             <h2>css</h2>
             <div>
                 <code>
-                    <pre id="css-output" class="bg(code-bg) p[1rem] ff[serif]"></pre>
+                    <pre id="css-output" class="bg(code-bg) p[1rem] ff[monospace]"></pre>
                 </code>
             </div>
         </div>
